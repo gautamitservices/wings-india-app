@@ -268,6 +268,101 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="w-full bg-white">
+        <div className="py-12 w-[90%] mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-start text-gray-800 tracking-wide">
+            Infrastructure
+          </h2>
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-6 lg:mt-8">
+            <div>
+              <p className="text-gray-600 font-normal leading-7 tracking-wide text-base lg:text-lg">
+                Our office premises span a carpeted area of approximately 4500 sq. ft., designed to
+                support efficiency, comfort, and productivity. The workspace is fully equipped with
+                modern facilities and a well-structured layout that ensures smooth day-to-day
+                operations.
+              </p>
+              <p className="text-gray-600 font-normal mt-6 leading-7 tracking-wide text-base lg:text-lg">
+                A dedicated area has been thoughtfully created for our field personnel, providing
+                them with a comfortable and relaxing space to unwind, prepare, and submit their
+                reports and data collected during assignments. This setup promotes a seamless
+                workflow and supports timely and accurate documentation.
+              </p>
+              <p className="text-gray-600 font-normal mt-6 leading-7 tracking-wide text-base lg:text-lg">
+                Overall, the infrastructure reflects our commitment to providing a professional,
+                well-organized, and employee-centric environment, enabling our teams to deliver
+                high-quality results with consistency and dedication.
+              </p>
+            </div>
+            <div className="w-full h-full min-h-100 relative">
+              <Image
+                src="/infra-1.jpg"
+                alt="Infrastructure"
+                fill
+                className="object-cover rounded-xl"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 mt-8 lg:mt-12">
+            <div className="w-full h-full min-h-100 relative">
+              <Image
+                src="/infra-2.jpg"
+                alt="Infrastructure"
+                fill
+                className="object-cover rounded-xl"
+              />
+            </div>
+            <div>
+              <h4 className="text-2xl font-bold text-start text-gray-800 tracking-wide">
+                Branch Offices
+              </h4>
+              <ul className="list-disc ml-5 space-y-2 lg:space-y-4 mt-6">
+                <li className="text-gray-600 font-normal text-base lg:text-lg tracking-wide leading-7">
+                  01, Suman Puri, 1st Floor, Sahastradhara Road, Near Sahastradhara Crossing,
+                  Dehradun - 248008
+                </li>
+                <li className="text-gray-600 font-normal text-base lg:text-lg tracking-wide leading-7">
+                  Pasrija Complex, 2nd Floor, Baba Tarana Road, Sonipat - 131001
+                </li>
+                <li className="text-gray-600 font-normal text-base lg:text-lg tracking-wide leading-7">
+                  S-18, 3rd Floor, Kaushiki Tower Complex, Mathura - 281001
+                </li>
+                <li className="text-gray-600 font-normal text-base lg:text-lg tracking-wide leading-7">
+                  2/29 Rocky Path, City Centre, Durgapur, West Bengal - 713216
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full bg-gray-800">
+        <div className="py-12 w-[90%] mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-start text-gray-100">Contact us</h2>
+          <p className="text-gray-300 font-bold mt-6 leading-7 tracking-wide text-lg lg:text-xl">
+            WINGS CORPORATE SERVICES PVT. LTD.
+          </p>
+          <p className="text-gray-300 font-normal mt-4 leading-7 tracking-wide text-base lg:text-lg">
+            B-235, 2nd & 3rd Floor, Naraina Industrial Area, Phase 1, New Delhi - 110028
+          </p>
+          <p className="text-gray-300 font-normal mt-2 leading-7 tracking-wide text-base lg:text-lg">
+            Mobile: +91 9811014286
+          </p>
+          <p className="text-gray-300 font-normal mt-2 leading-7 tracking-wide text-base lg:text-lg">
+            Landline: 011-35381283
+          </p>
+          <p className="text-gray-300 font-normal mt-2 leading-7 tracking-wide text-base lg:text-lg">
+            Contact Person: Mr. Kamal Singh Yadav (Director)
+          </p>
+          <p className="text-gray-300 font-normal mt-2 leading-7 tracking-wide text-base lg:text-lg">
+            Email: kamal.yadav@wingscorporateservices.com
+          </p>
+        </div>
+      </div>
+      <hr className="border-gray-300" />
+      <div className="bg-gray-800 py-6">
+        <p className="text-center text-gray-200 text-sm w-[90%] mx-auto">
+          &copy; {new Date().getFullYear()} Wings Corporate Services Pvt. Ltd. All rights reserved.
+        </p>
+      </div>
     </div>
   );
 }
