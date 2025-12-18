@@ -71,9 +71,12 @@ export default function Home() {
             to final collection, we handle the entire recovery lifecycle so you can focus on
             lending.
           </p>
-          <button className="mt-6 lg:mt-10 px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-600 cursor-pointer transition">
+          <a
+            href="#contact"
+            className="mt-6 lg:mt-10 px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-600 cursor-pointer transition"
+          >
             Consult Our Experts
-          </button>
+          </a>
         </div>
       </div>
       <div className="w-full bg-gray-50">
@@ -348,7 +351,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-800">
+      <div className="w-full bg-gray-800" id="contact">
         <div className="py-12 w-[90%] mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-start text-gray-100">Contact us</h2>
           <p className="text-gray-300 font-bold mt-6 leading-7 tracking-wide text-lg lg:text-xl">
