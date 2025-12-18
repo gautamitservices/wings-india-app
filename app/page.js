@@ -36,7 +36,7 @@ const list = [
   {
     id: 12,
     name: "Sumitomo Mitsui Financial Group",
-    image: "/SMFG-logo.svg",
+    image: "/SMFG-Logo.png",
     url: "#",
     background: "green",
   },
