@@ -50,19 +50,19 @@ export default function Home() {
           <Image
             src="/wings-logo.png"
             alt="Wings Logo"
-            className="shrink-0"
+            className="shrink-0!"
             width={48}
             height={48}
             priority
           />
-          <p className="text-gray-800 font-bold text-[15px] lg:text-lg">
+          <p className="text-gray-800 font-bold text-[15px] lg:text-lg tracking-wide">
             WINGS CORPORATE SERVICES PVT. LTD.
           </p>
         </div>
       </div>
       <div className={`flex h-fit min-h-screen tracking-wide bg-white`}>
         <div className="w-[90%] mx-auto h-full min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-wide leading-10 lg:leading-20  text-center text-gray-800">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-wide leading-10 lg:leading-20  text-center text-gray-800">
             {/* Professional Debt Recovery & Legal Execution Services */}
             Fast & Effective Debt Recovery Solutions
           </h1>
