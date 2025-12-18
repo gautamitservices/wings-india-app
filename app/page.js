@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Libre_Baskerville, Inter } from "next/font/google";
 import Image from "next/image";
 import Slider from "react-infinite-logo-slider";
@@ -46,8 +45,23 @@ const list = [
 export default function Home() {
   return (
     <div className={libreBaskerville.className}>
+      <div className="w-full h-20 bg-white sticky top-0 left-0 z-10 shadow-main">
+        <div className="flex flex-row gap-4 h-full items-center w-[90%] mx-auto">
+          <Image
+            src="/wings-logo.png"
+            alt="Wings Logo"
+            className="shrink-0"
+            width={48}
+            height={48}
+            priority
+          />
+          <p className="text-gray-800 font-bold text-[15px] lg:text-lg">
+            WINGS CORPORATE SERVICES PVT. LTD.
+          </p>
+        </div>
+      </div>
       <div className={`flex h-fit min-h-screen tracking-wide bg-white`}>
-        <div className="w-[90%] mx-auto h-full min-h-screen flex flex-col justify-center items-center">
+        <div className="w-[90%] mx-auto h-full min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center">
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-wide leading-10 lg:leading-20  text-center text-gray-800">
             {/* Professional Debt Recovery & Legal Execution Services */}
             Fast & Effective Debt Recovery Solutions
