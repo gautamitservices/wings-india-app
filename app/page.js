@@ -44,20 +44,18 @@ const list = [
 ];
 
 export default function Home() {
-  const [tooltipContent, setTooltipContent] = useState("");
-  const getRegionData = (geo) => {
-    return locationData.find((s) => s.state === geo.properties.NAME_1);
-  };
   return (
     <div className={libreBaskerville.className}>
       <div className={`flex h-fit min-h-screen tracking-wide bg-white`}>
         <div className="w-[90%] mx-auto h-full min-h-screen flex flex-col justify-center items-center">
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-wide leading-10 lg:leading-20  text-center text-gray-800">
-            Professional Debt Recovery & Legal Execution Services
+            {/* Professional Debt Recovery & Legal Execution Services */}
+            Fast & Effective Debt Recovery Solutions
           </h1>
-          <p className="text-center lg:mt-10 text-gray-600 mt-6 font-normal tracking-wide leading-7 text-base lg:text-lg">
-            We help financial institutions resolve NPAs and recover funds through strategic legal
-            notices, skip tracing, and court enforcement.
+          <p className="text-center lg:mt-10 text-gray-600 mt-6 font-normal tracking-wide leading-7 text-base lg:text-lg lg:w-[90%] mx-auto">
+            We help financial institutions liquidate Non-Performing Assets (NPA). From skip tracing
+            to final collection, we handle the entire recovery lifecycle so you can focus on
+            lending.
           </p>
           <button className="mt-6 lg:mt-10 px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-600 cursor-pointer transition">
             Consult Our Experts
@@ -67,7 +65,7 @@ export default function Home() {
       <div className="w-full bg-gray-50">
         <div className="py-12 w-[90%] mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-start text-gray-800">
-            End-to-End Legal Recovery Solutions
+            End-to-End Recovery Solutions
           </h2>
           <p className="text-gray-600 font-normal mt-6 leading-7 tracking-wide text-base lg:text-lg">
             We specialize in assisting financial institutions with the complex lifecycle of debt
@@ -84,11 +82,12 @@ export default function Home() {
                   className="opacity-60!"
                 />
                 <h3 className="font-bold! tracking-wide leading-7 mt-4! text-base lg:text-lg text-gray-800">
-                  Legal Notices & Communication
+                  Direct Recovery & NPA Resolution
                 </h3>
                 <p className="mt-4 text-gray-600 tracking-wide leading-6 text-[15px] font-normal">
-                  The recovery process starts with clear communication. We handle the drafting and
-                  dispatching of all necessary correspondence to signal intent and demand payment.{" "}
+                  Our core expertise is recovering funds from Non-Performing Assets (NPAs). We
+                  engage with defaulters directly using professional persistence to secure payments
+                  and resolve outstanding dues quickly.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow-main">
@@ -117,12 +116,12 @@ export default function Home() {
                   className="opacity-60!"
                 />{" "}
                 <h3 className="font-bold! tracking-wide leading-7 mt-4! text-base lg:text-lg text-gray-800">
-                  Summon Serving & Due Process
+                  Strategic Workflows (Flows)
                 </h3>
                 <p className="mt-4 text-gray-600 tracking-wide leading-6 text-[15px] font-normal">
-                  Delays in serving summons often stall legal proceedings. We specialize in the
-                  physical serving of summons and ensuring proper acknowledgement is received,
-                  keeping your legal timeline on track.
+                  Every debt is different. We use intelligent "Flows" to determine the best path for
+                  recovery. Whether a borrower needs a gentle Dunning Notice or a stricter approach,
+                  our system automatically triggers the right action at the right time.
                 </p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow-main">
@@ -153,18 +152,19 @@ export default function Home() {
                 Turning Non-Performing Assets into Recoveries
               </h3>
               <p className="mt-4 text-gray-300 tracking-wide leading-6 text-[15px] font-normal">
-                From locating elusive defaulters through Skip Tracing to serving Dunning Notices and
-                executing Court Warrants (BW/NBW), we ensure your legal actions are delivered,
-                acknowledged, and enforced efficiently.{" "}
+                Non-Performing Assets (NPAs) drain your liquidity and waste valuable time. We stop
+                the loss by transforming stagnant debt into active recovery. Our approach goes
+                beyond simple collections; we utilize intelligent Recovery Flows that automatically
+                adapt to the borrower's behavior.
               </p>
               <p className="mt-4 text-gray-300 tracking-wide leading-6 text-[15px] font-normal">
-                We bridge the gap between loan default and resolution. Our team handles the critical
-                legwork—including Legal Notices, Summon Serving, and Decree Execution—to maximize
-                recovery rates for Banks and NBFCs while ensuring full legal compliance.
+                It starts with visibility—using Skip Tracing to locate borrowers who have gone off
+                the radar. Once located, we apply graduated pressure, moving from Dunning Notices to
+                strict Legal Execution (such as Summon Serving or Warrants) only when necessary.
               </p>
               <p className="mt-4 text-gray-300 tracking-wide leading-6 text-[15px] font-normal">
-                Our approach combines strict legal compliance with aggressive skip tracing to
-                maximize recovery rates for Banks, NBFCs, and Lenders.
+                This strategic combination ensures that every action taken is focused on one result:
+                getting the money back into your account.
               </p>
             </div>
           </div>
