@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Libre_Baskerville, Inter } from "next/font/google";
 import Image from "next/image";
 import Slider from "react-infinite-logo-slider";
@@ -22,7 +23,20 @@ const list = [
   { id: 4, name: "Axis Finance Limited", image: "/axis-finance.png", url: "#" },
   { id: 5, name: "HDFC Bank Limited", image: "/hdfc-bank-logo.svg ", url: "#" },
   { id: 6, name: "Indusind Bank", image: "/indusind-bank.webp", url: "#" },
-  { id: 7, name: "Lending Kart", image: "/lending-kart.png", url: "#" },
+  {
+    id: 7,
+    name: "Lending Kart",
+    image: "/lending-kart.png",
+    url: "#",
+    isDetails: true,
+    details: {
+      heading: "Lendingkart Grievance Officer Details:",
+      name: "Mr. Ketan Sali",
+      designation: "Senior Manager - Customer Service",
+      contactNumber: "+91 6358874622",
+      emailId: "grievance.redressal@lendingkart.com",
+    },
+  },
   { id: 8, name: "Paytm", image: "/paytm.svg", url: "#" },
   { id: 9, name: "PNB Housing Finance Limited", image: "/pnb.webp", url: "#" },
   { id: 10, name: "RBL Bank", image: "/rbl-bank.png", url: "#" },
@@ -43,6 +57,8 @@ const list = [
 ];
 
 export default function Home() {
+  const [selectedClient, setSelectedClient] = useState(null);
+
   return (
     <div className={libreBaskerville.className}>
       <div className="w-full h-20 bg-white sticky top-0 left-0 z-10 shadow-main">
@@ -207,7 +223,14 @@ export default function Home() {
               return (
                 <Slider.Slide id={client?.id} key={index}>
                   {/* <Link href={client?.url} target="_blank"> */}
-                  <img src={client?.image} alt={client?.name} className="w-36 mt-8" />
+                  <img
+                    src={client?.image}
+                    alt={client?.name}
+                    className="w-36 mt-8 cursor-pointer"
+                    onClick={() => {
+                      if (client?.isDetails) setSelectedClient(client);
+                    }}
+                  />
                   {/* </Link> */}
                 </Slider.Slide>
               );
@@ -276,7 +299,8 @@ export default function Home() {
               <p className="text-gray-600 font-normal mt-6 leading-7 tracking-wide text-[15px] lg:text-base">
                 We approach every task with a sense of responsibility and care. This includes
                 protecting client interests, ensuring consumer fairness, and maintaining ethical
-                dealings. We value long-term relationships built on respect, empathy, and trust.{" "}
+                dealings. We value long-term relationships built on respect, empathy, and
+                trust.{" "}
               </p>
             </div>
             <div className="w-full h-full relative min-h-75 lg:min-h-100 rounded-xl overflow-hidden">
@@ -380,6 +404,53 @@ export default function Home() {
           &copy; {new Date().getFullYear()} Wings Corporate Services Pvt. Ltd. All rights reserved.
         </p>
       </div>
+      {selectedClient && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          onClick={() => setSelectedClient(null)}
+        >
+          <div
+            className={`bg-white rounded-xl shadow-main w-full max-w-md p-6 relative`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              aria-label="Close"
+              onClick={() => setSelectedClient(null)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 cursor-pointer text-2xl leading-none"
+            >
+              &times;
+            </button>
+            <div className="flex flex-col items-center text-center">
+              <img src={selectedClient?.image} alt={selectedClient?.name} className="w-32 mb-4" />
+              {/* <h3 className="font-bold text-lg text-gray-800">{selectedClient?.name}</h3> */}
+              {selectedClient?.details ? (
+                <div className="mt-4 w-full text-left space-y-2">
+                  <p className="font-semibold text-gray-800">{selectedClient.details.heading}</p>
+                  <p className="text-gray-600 text-sm">
+                    <span className="font-semibold text-gray-800">Name: </span>
+                    {selectedClient.details.name}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    <span className="font-semibold text-gray-800">Designation: </span>
+                    {selectedClient.details.designation}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    <span className="font-semibold text-gray-800">Contact Number: </span>
+                    {selectedClient.details.contactNumber}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    <span className="font-semibold text-gray-800">Email ID: </span>
+                    {selectedClient.details.emailId}
+                  </p>
+                </div>
+              ) : (
+                <p className="mt-2 text-gray-600 text-sm">No additional details available.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
